@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-2xl leading-8 font-bold tracking-tight sm:text-3xl sm:leading-9;
+  }
+
+  h2 {
+    @apply text-xl font-semibold leading-7 sm:text-2xl sm:leading-8;
+  }
+
+  h3 {
+    @apply text-lg font-semibold sm:text-xl sm:leading-7;
+  }
+
+  h4 {
+    @apply text-lg leading-6 font-semibold;
+  }
+
+  h5 {
+    @apply text-base leading-5 font-semibold;
+  }
+
+  h6 {
+    @apply text-xs leading-5 font-semibold tracking-wide uppercase opacity-70;
+  }
+
+  p {
+    @apply text-sm leading-5 opacity-70;
+  }
+}
+@layer components { 
+	/* Range */
+  .range-white {
+    --range-shdw: oklch(1 0 0);
+    --slider-track-color: rgba(255, 255, 255, 0.3);
+    --slider-thumb-color: rgb(225, 225, 225);
+  }
+  .range-white::-webkit-slider-runnable-track {
+    background-color: var(--slider-track-color, rgba(255, 255, 255, 0.3));
+  }
+  .range-white::-moz-range-track {
+    background-color: var(--slider-track-color, rgba(255, 255, 255, 0.3));
+  }
+  .range-white::-webkit-slider-thumb {
+    background-color: var(--slider-thumb-color, rgb(225, 225, 225));
+  }
+  .range-white::-moz-range-thumb {
+    background-color: var(--slider-thumb-color, rgb(225, 225, 225));
+  }
+
+  /* Background styles */
+  .bg-black-alpha {
+    @apply bg-black/5;
+  }
+  .bg-white-alpha {
+    @apply bg-white/10;
+  }
+
+  /* Btn style */
+  .btn-white-alpha {
+    @apply bg-white-alpha text-white border-none hover:bg-white/30;
+  }
+  .btn-black-alpha {
+    @apply bg-black-alpha text-black border-none hover:bg-black/30;
+  }
+}
+@layer utilities {}
